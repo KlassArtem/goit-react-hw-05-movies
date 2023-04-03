@@ -1,9 +1,8 @@
-
 import axios from "axios";
 
 export async function getTrendingMovies () {
     try {
-        const response = await axios("https://api.themoviedb.org/3/movie/550?api_key=3e2f1ab4f0b29a2221a588c6ca70bc56")
+        const response = await axios("https://api.themoviedb.org/3/trending/all/day?api_key=3e2f1ab4f0b29a2221a588c6ca70bc56")
         if (response.status === 200) {
             return response.data.results;
         };
